@@ -15,7 +15,7 @@ class EventSerializer(serializers.ModelSerializer):
         """
         return Events.objects.create(**validated_data)
     
-     def update(self, instance, validated_data):
+    def update(self, instance, validated_data):
         """
         Update and return an existing `Person` instance, given the validated data.
         """   

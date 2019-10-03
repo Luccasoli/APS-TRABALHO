@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .serializers import EventsSerializer
+from .serializers import EventSerializer
 from rest_framework.response import Response
 from .models import Events
 from rest_framework.decorators import api_view, permission_classes
@@ -9,7 +9,7 @@ from rest_framework.permissions import AllowAny
 @permission_classes([AllowAny])
 def create_new_event(request):
     """"""    
-    serializer = EventsSerializer(data=request.data)
+    serializer = EventSerializer(data=request.data)
     if serializer.is_valid():
         pass
     return Response(serializer.errors)

@@ -23,6 +23,7 @@ urlpatterns = [
     path('student/', include('apps.Aluno.urls')),
     path('professor/', include('apps.Professor.urls')),
     path('administrator/', include('apps.Administrador.urls')),
+    path('events/', include('apps.Events.urls')),
     path('login/auth/', auth),
     path('create/', create_new_account),
     re_path('.*', TemplateView.as_view(template_name='index.html'))

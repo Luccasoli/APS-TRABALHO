@@ -9,7 +9,7 @@ class ConcentrationArea(models.Model):
         return self.area
 
     class Meta:
-        db_table = 'concentration areas'
+        db_table = 'concentration_areas'
 
 
 class Keyword(models.Model):

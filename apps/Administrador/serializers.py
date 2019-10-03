@@ -27,18 +27,12 @@ class CreateAdministratorSerializer(serializers.ModelSerializer):
 class ConcentrationAreaSerializer(serializers.ModelSerializer):
     """"""
     class Meta:
-        model: ConcentrationArea
+        model = ConcentrationArea
         fields = '__all__'
-
-    def create(self, validated_data):
-        return ConcentrationArea.objects.create(**validated_data)
 
 
 class KeywordSerializer(serializers.ModelSerializer):
     """"""
     class Meta:
-        model: Keyword
+        model = Keyword
         fields = '__all__'
-
-    def create(self, validated_data):
-        return Keyword.objects.create(**validated_data)
